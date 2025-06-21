@@ -202,7 +202,7 @@ export const CodeEditor = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden h-full">
       <div className="bg-gradient-to-r from-gray-50 to-blue-50 px-6 py-4 border-b border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -293,14 +293,14 @@ export const CodeEditor = () => {
         </div>
       </div>
       
-      <div className="relative">
+      <div className="relative h-[calc(100%-140px)]">
         {/* Visible textarea for editing */}
         <textarea
           ref={textareaRef}
           value={code}
           onChange={(e) => setCode(e.target.value)}
           onScroll={handleScroll}
-          className="w-full h-96 p-4 font-mono text-sm bg-gray-900 text-white resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset border-0"
+          className="w-full h-full p-4 font-mono text-sm bg-gray-900 text-white resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset border-0"
           spellCheck={false}
           style={{ 
             fontFamily: 'SF Mono, Monaco, Inconsolata, "Roboto Mono", Consolas, "Courier New", monospace',
