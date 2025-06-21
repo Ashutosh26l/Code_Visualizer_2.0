@@ -13,33 +13,33 @@ function App() {
         <Header />
         
         <main className="flex flex-col gap-6 p-6 max-w-[1800px] mx-auto">
-          {/* Top Row - Code Editor, Input/Output, Call Stack */}
-          <div className="grid grid-cols-12 gap-6 h-[600px]">
-            {/* Code Editor - Left side (5 columns) */}
-            <div className="col-span-5">
+          {/* Top Row - Code Editor, Input, Call Stack - Fixed height at 75vh */}
+          <div className="grid grid-cols-12 gap-6" style={{ height: '75vh' }}>
+            {/* Code Editor - Left side (5 columns) - Fixed width */}
+            <div className="col-span-5 min-w-0">
               <CodeEditor />
             </div>
             
-            {/* Input/Output - Middle (3 columns) */}
-            <div className="col-span-3">
+            {/* Input - Middle (3 columns) - Fixed width */}
+            <div className="col-span-3 min-w-0">
               <InputOutput />
             </div>
             
-            {/* Call Stack - Right side (4 columns) */}
-            <div className="col-span-4">
+            {/* Call Stack - Right side (4 columns) - Fixed width */}
+            <div className="col-span-4 min-w-0">
               <VisualizationPanel showOnlyStack={true} />
             </div>
           </div>
           
           {/* Bottom Row - Control Panel and Heap Memory */}
           <div className="grid grid-cols-12 gap-6">
-            {/* Control Panel - Left side (5 columns) */}
-            <div className="col-span-5">
+            {/* Control Panel - Left side (5 columns) - Fixed width */}
+            <div className="col-span-5 min-w-0">
               <ControlPanel />
             </div>
             
-            {/* Heap Memory - Right side (7 columns) */}
-            <div className="col-span-7">
+            {/* Heap Memory - Right side (7 columns) - Fixed width */}
+            <div className="col-span-7 min-w-0">
               <VisualizationPanel showOnlyHeap={true} />
             </div>
           </div>

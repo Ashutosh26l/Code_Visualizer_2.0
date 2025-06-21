@@ -9,8 +9,8 @@ export const VisualizationPanel = ({ showOnlyStack = false, showOnlyHeap = false
 
   if (showOnlyStack) {
     return (
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden h-full">
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-4 border-b border-gray-200">
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden h-full w-full">
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 px-6 py-4 border-b border-gray-200 flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-2 rounded-lg">
               <Layers className="h-4 w-4 text-white" />
@@ -21,7 +21,7 @@ export const VisualizationPanel = ({ showOnlyStack = false, showOnlyHeap = false
             </span>
           </div>
         </div>
-        <div className="p-6 h-[calc(100%-80px)] overflow-y-auto">
+        <div className="p-6 h-[calc(100%-80px)] overflow-y-auto overflow-x-hidden">
           <StackVisualization />
         </div>
       </div>
@@ -30,8 +30,8 @@ export const VisualizationPanel = ({ showOnlyStack = false, showOnlyHeap = false
 
   if (showOnlyHeap) {
     return (
-      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-        <div className="bg-gradient-to-r from-orange-50 to-red-50 px-6 py-4 border-b border-gray-200">
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden w-full">
+        <div className="bg-gradient-to-r from-orange-50 to-red-50 px-6 py-4 border-b border-gray-200 flex-shrink-0">
           <div className="flex items-center space-x-3">
             <div className="bg-gradient-to-br from-orange-500 to-red-600 p-2 rounded-lg">
               <Database className="h-4 w-4 text-white" />
@@ -42,7 +42,7 @@ export const VisualizationPanel = ({ showOnlyStack = false, showOnlyHeap = false
             </span>
           </div>
         </div>
-        <div className="p-6 max-h-96 overflow-y-auto">
+        <div className="p-6 max-h-96 overflow-y-auto overflow-x-hidden">
           <HeapVisualization />
         </div>
       </div>
