@@ -25,7 +25,7 @@ export const InputOutput = () => {
             className="w-full h-full p-4 border border-gray-200 rounded-xl font-mono text-sm bg-gray-50 focus:bg-white focus:border-blue-300 focus:ring-2 focus:ring-blue-100 transition-all resize-none text-gray-800 caret-blue-500"
             style={{ caretColor: '#3B82F6' }}
           />
-          <p className="text-xs text-gray-500 mt-2 absolute bottom-2">
+          <p className="text-xs text-gray-500 mt-2">
             Provide input that your program might need (one value per line)
           </p>
         </div>
